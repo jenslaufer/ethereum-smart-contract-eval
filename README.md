@@ -7,7 +7,7 @@ This little Project contains a simple smart contracts. The project is about unde
 
    - compilation of contract
 
-     ```{shell}
+     ```{code}
        docker run --rm -v ${PWD}:/solidity ethereum/solc:stable --optimize --bin --abi --hashes -o /solidity/build --overwrite /solidity/helloworld.sol
      ```
 
