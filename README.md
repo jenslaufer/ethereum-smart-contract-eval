@@ -5,24 +5,12 @@ This little Project contains a simple smart contracts. The project is about unde
 
 ## Steps
 
-   - compilation of contract
+   - Start development
+      ```
+       docker run -d --name truffle -p 3000-3001:3000-3001 -p 8545:8545 -v ${pwd}:/app lead4good/truffle
+      ```
 
-     ```
-      docker run --rm -v ${PWD}:/solidity ethereum/solc:stable --optimize --bin --abi --hashes -o /solidity/build --overwrite /solidity/contract.sol
-     ```
-
-
-  - run test rpc
-
-    ```
-      docker run -d -p 8545:8545 harshjv/testrpc
-    ```
-
-    ```
-    docker run -v ${PWD}:/sol mzupzup/soliditybuilder
-    ```
-
-    ```
-
-    docker run  ${PWD}:/sol mzupzup/soliditywatcher
-    ```
+   - Interactive mode
+   ```
+   docker exec -it truffle sh
+   ```
