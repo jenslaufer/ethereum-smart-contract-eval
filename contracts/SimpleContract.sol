@@ -1,13 +1,13 @@
 pragma solidity ^0.4.2;
 
 contract SimpleContract {
-	address owner_;
+	address public owner;
     
     function SimpleContract() public{
-    	owner_ = msg.sender;
+    	owner = msg.sender;
     }
 
-    function helloworld() public view returns(string){
+    function helloworld() public pure returns(string){
 		return "helloworld";
 	}
 
