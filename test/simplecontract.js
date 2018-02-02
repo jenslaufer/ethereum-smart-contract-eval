@@ -1,4 +1,4 @@
-var SimpleContract = artifacts.require("./SimpleContract.sol");
+var SimpleContract = artifacts.require("./SimpleContractImplV1.sol");
 
 contract('SimpleContract', function(accounts) {
 	it("should return hello world", function() {
@@ -18,4 +18,5 @@ contract('SimpleContract', function(accounts) {
 			assert.equal(address, accounts[0], "hello world isn#t returned");
 		});
 	});
+
 });

@@ -1,5 +1,7 @@
-var SimpleContract = artifacts.require("./SimpleContract.sol");
+var registry = artifacts.require("./Registry.sol");
+var simpleContractImpl = artifacts.require("./SimpleContractImplV1.sol");
 
 module.exports = function(deployer) {
-	deployer.deploy(SimpleContract);
+	deployer.deploy(registry);
+	deployer.deploy(simpleContractImpl);
 };
